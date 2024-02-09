@@ -75,3 +75,24 @@ footer {
     stroke-dasharray: var(--end-value) 190;
   }
 }
+
+@media (min-width: 768px) {
+  .animate-box {
+    width: 350px;
+  }
+  .text-box {
+    top: 75px;
+    left: 20px;
+    line-height: 28px;
+  }
+
+  .percentage {
+    font-size: 85px;
+    line-height: 65px;
+    letter-spacing: -3px;
+  }
+
+  .text {
+    font-size: 28px;
+  }
+}
