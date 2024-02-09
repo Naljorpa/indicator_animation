@@ -1,0 +1,78 @@
+.animate-box {
+  position: relative;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-weight: 900;
+}
+
+.text-box {
+  top: 10%;
+  left: 1rem;
+  line-height: 2rem;
+  position: absolute;
+  z-index: 4;
+}
+
+.percentage {
+  display: block;
+  font-size: 6rem;
+  line-height: 5rem;
+}
+
+.text {
+  display: block;
+  font-size: 2rem;
+  width: 8rem;
+}
+
+footer {
+  height: 200px;
+}
+
+.red-circle {
+  stroke: #e20d1a;
+  stroke-width: 16.8%;
+  z-index: 1;
+}
+
+.pie {
+  z-index: 2;
+  stroke: #ededed;
+  stroke-width: 85%;
+  stroke-dasharray: 190 190;
+  animation: dash-animation 2s ease-in forwards;
+}
+
+.mask-box {
+  z-index: 3;
+
+  position: absolute;
+  width: 100%;
+}
+
+.mask {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  /* transform: rotate(120deg); */
+  fill: white;
+  /* border-radius: 50%; */
+}
+
+:root {
+  --my-end-width: 0;
+}
+
+@keyframes dash-animation {
+  to {
+    stroke-dasharray: var(--end-value) 190;
+  }
+}

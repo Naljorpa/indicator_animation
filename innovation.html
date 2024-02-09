@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>animate_svg</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/innovation.css">
+        <script defer src="assets/js/innovation.js"></script>
+    </head>
+
+    <body>
+        <h1>Innovation SVG</h1>
+
+        <div class="container">
+
+            <div class="animate-box">
+                <div class="text-box">
+                    <span id="number" class="numbers">0</span>
+                    <span class="text">Projets en innovation pédagogique</span>
+                </div>
+
+                <svg viewBox="0 0 500 500">
+                    <defs>
+                        <mask class="mask" id="routeMask">
+                            <rect id="maskRect" fill="white" width="500" height="800" x="-400">
+                                <animate attributeName="x" from="-400" to="-300" dur="2s" fill="freeze" />
+
+                                <animateTransform attributeName="transform" type="rotate" from="0 -400 300" to="-45 400 -8" dur="1.8s" fill="freeze" />
+                            </rect>
+                        </mask>
+                    </defs>
+                    <g>
+                        <path class="route" d="M462,180.9L462,180.9h-60c-11,0-20,8.9-20,20l0,0c0,11.1,9,20,20,20h10L369.8,263H260.7c-0.4,0-0.7,0-1,0
+        		c-7.3-0.4-14.6,3.2-18.5,10l-96.6,167.3H40c-11,0-20,9-20,20l0,0c0,11,9,20,20,20h116.1c6.6,0,12.5-3.2,16.1-8.2
+        		c0.5-0.7,1.1-1.4,1.5-2.2L270.1,303h106.8c0.2,0,0.4,0,0.6,0c5.3,0.2,10.7-1.8,14.8-5.8l49.7-49.7v13.5c0,11,9,20,20,20l0,0
+        		c11,0,20-9,20-20v-60l0,0C482,189.8,473,180.9,462,180.9z" mask="url(#routeMask)" />
+
+
+                        <path class="st3 fleche" d="M322.8,235.9l-42.4-42.4c-7.8-7.8-20.5-7.8-28.3,0l0,0c-7.8,7.8-7.8,20.5,0,28.3l7,7l-67.8,0c-11,0-20,9-20,20l0,0
+        		c0,11,9,20,20,20h70.3l-9.5,9.5c-7.8,7.8-7.8,20.5,0,28.3c7.8,7.8,20.5,7.8,28.3,0l42.4-42.4l0,0
+        		C330.6,256.3,330.6,243.7,322.8,235.9z" />
+                    </g>
+                </svg>
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+        <footer></footer>
+    </body>
+
+</html>

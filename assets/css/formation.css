@@ -1,0 +1,51 @@
+.animate-box {
+  position: relative;
+  padding: 0 2rem 2rem 0;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-weight: 900;
+}
+
+.text-box {
+  top: 20%;
+  left: 1rem;
+  line-height: 2rem;
+  position: absolute;
+  z-index: 4;
+}
+
+.numbers {
+  display: block;
+  font-size: 6rem;
+  line-height: 5rem;
+  letter-spacing: -0.2rem;
+}
+
+.text {
+  display: block;
+  font-size: 2rem;
+  width: 13rem;
+}
+
+@keyframes reveal {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+path {
+  transform-origin: bottom;
+  animation: reveal 1s ease forwards;
+  opacity: 0;
+  fill: #ffc102;
+  transition: fill 0.5s ease;
+}
+
+.completed {
+  fill: #ededed;
+}
