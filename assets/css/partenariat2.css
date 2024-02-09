@@ -38,17 +38,17 @@ footer {
   height: 200px;
 }
 
-.red-circle {
-  stroke: #e20d1a;
+.circle {
+  stroke: #ededed;
   stroke-width: 16.8%;
   z-index: 1;
 }
 
 .pie {
   z-index: 2;
-  stroke: #ededed;
+  stroke: #e20d1a;
   stroke-width: 85%;
-  stroke-dasharray: 190 190;
+  stroke-dasharray: 0 190;
   animation: dash-animation 2s ease-in forwards;
 }
 
@@ -63,13 +63,11 @@ footer {
   width: 100%;
   position: absolute;
   z-index: 3;
-  /* transform: rotate(120deg); */
   fill: white;
-  /* border-radius: 50%; */
 }
 
 :root {
-  --my-end-width: 0;
+  --my-end-width: 190;
 }
 
 @keyframes dash-animation {

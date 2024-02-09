@@ -9,7 +9,7 @@ body {
 }
 
 .text-box {
-  top: 33%;
+  top: 20%;
   left: 1rem;
   line-height: 2rem;
   position: absolute;
@@ -20,6 +20,7 @@ body {
   display: block;
   font-size: 6rem;
   line-height: 5rem;
+  letter-spacing: -0.2rem;
 }
 
 .text {
@@ -35,6 +36,10 @@ body {
 
 .cls-2 {
   fill: #fff;
+}
+
+.svg-group {
+  transform: translateY(-2rem);
 }
 
 .container {
