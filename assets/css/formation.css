@@ -10,23 +10,23 @@ body {
 
 .text-box {
   top: 20%;
-  left: 1rem;
-  line-height: 2rem;
+  left: 5%;
+  line-height: 7vw;
   position: absolute;
   z-index: 4;
 }
 
 .numbers {
   display: block;
-  font-size: 6rem;
-  line-height: 5rem;
+  font-size: 22vw;
+  line-height: 17vw;
   letter-spacing: -0.2rem;
 }
 
 .text {
   display: block;
-  font-size: 2rem;
-  width: 13rem;
+  font-size: 7vw;
+  width: 40%;
 }
 
 @keyframes reveal {
