@@ -9280,11 +9280,11 @@ div.tree-child-horizontal {
 
 .animate-box {
   position: relative;
-  padding: 0 2rem 2rem 2rem;
+  /* padding: 0 2rem 2rem 2rem; */
   container-type: inline-size;
 }
 
-.container {
+.container-box {
   position: relative;
   width: 100%;
 }
@@ -9333,7 +9333,7 @@ body {
   stroke: #ededed;
   stroke-width: 85%;
   stroke-dasharray: 190 190;
-  animation: dash-animation 2s ease-in forwards;
+  /* animation: dash-animation 2s ease-in forwards; */
 }
 
 .mask-box {
@@ -9380,14 +9380,10 @@ body {
   transform: translateY(-2rem);
 }
 
-.container {
-  position: relative;
-}
-
 .fleche {
   position: absolute;
   transform-origin: center center;
-  animation: deplacementFleche 2s forwards;
+  /* animation: deplacementFleche 2s forwards; */
 }
 
 .mask {
@@ -9425,6 +9421,14 @@ body {
   fill: #ededed;
 }
 
+.bar {
+  transform-origin: bottom;
+  /* animation: reveal 1s ease forwards; */
+  opacity: 0;
+  fill: #ffc102;
+  transition: fill 0.5s ease;
+}
+
 @keyframes reveal {
   0% {
     transform: scaleY(0);
@@ -9432,14 +9436,6 @@ body {
   100% {
     transform: scaleY(1);
   }
-}
-
-.bar {
-  transform-origin: bottom;
-  animation: reveal 1s ease forwards;
-  opacity: 0;
-  fill: #ffc102;
-  transition: fill 0.5s ease;
 }
 
 .completed {
