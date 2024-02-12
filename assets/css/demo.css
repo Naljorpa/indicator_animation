@@ -9276,9 +9276,12 @@ div.tree-child-horizontal {
   float: none;
 }
 
+/* Styles for the animations */
+
 .animate-box {
   position: relative;
   padding: 0 2rem 2rem 2rem;
+  container-type: inline-size;
 }
 
 .container {
@@ -9301,23 +9304,26 @@ body {
 
 .percentage {
   display: block;
-  font-size: 22vw;
-  line-height: 17vw;
+  font-size: 20vw;
+  line-height: 14vw;
   letter-spacing: -0.2rem;
 }
 
 .text {
   display: block;
-  font-size: 7vw;
-  width: 40%;
-}
-
-footer {
-  height: 200px;
+  font-size: 6vw;
+  line-height: 6vw;
+  width: 55%;
 }
 
 .red-circle {
   stroke: #e20d1a;
+  stroke-width: 16.8%;
+  z-index: 1;
+}
+
+.yellow-circle {
+  stroke: #ffc102;
   stroke-width: 16.8%;
   z-index: 1;
 }
@@ -9341,9 +9347,7 @@ footer {
   width: 100%;
   position: absolute;
   z-index: 3;
-  /* transform: rotate(120deg); */
   fill: white;
-  /* border-radius: 50%; */
 }
 
 :root {
@@ -9356,35 +9360,11 @@ footer {
   }
 }
 
-.animate-box {
-  position: relative;
-  padding: 0 2rem 2rem 0;
-}
-
-body {
-  font-family: "Overpass", sans-serif;
-  font-weight: 900;
-}
-
-.text-box {
-  top: 20%;
-  left: 5%;
-  line-height: 7vw;
-  position: absolute;
-  z-index: 4;
-}
-
 .numbers {
   display: block;
   font-size: 22vw;
   line-height: 17vw;
   letter-spacing: -0.2rem;
-}
-
-.text {
-  display: block;
-  font-size: 7vw;
-  width: 40%;
 }
 
 .st3 {
@@ -9445,30 +9425,72 @@ body {
   fill: #ededed;
 }
 
-@media (min-width: 768px) {
-  .animate-box {
-    width: 350px;
-    height: 300px;
+@keyframes reveal {
+  0% {
+    transform: scaleY(0);
   }
-  .text-box {
-    top: 75px;
-    left: 20px;
-    line-height: 28px;
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.bar {
+  transform-origin: bottom;
+  animation: reveal 1s ease forwards;
+  opacity: 0;
+  fill: #ffc102;
+  transition: fill 0.5s ease;
+}
+
+.completed {
+  fill: #ededed;
+}
+
+@media (min-width: 575px) {
+  @container (width > 150px ) {
+    .text-box {
+      top: 10%;
+      left: 20px;
+    }
+
+    .percentage,
+    .numbers {
+      font-size: 8vw;
+      line-height: 6vw;
+      letter-spacing: -9px;
+    }
+
+    .text {
+      font-size: 2.4vw;
+      line-height: 2.5vw;
+    }
   }
 
+  @container (width > 450px ) {
+    .percentage,
+    .numbers {
+      font-size: 120px;
+      line-height: 90px;
+      letter-spacing: -9px;
+    }
+
+    .text {
+      font-size: 36px;
+      line-height: 37px;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .percentage,
   .numbers {
-    font-size: 85px;
-    line-height: 65px;
-    letter-spacing: -3px;
-  }
-
-  .percentage {
-    font-size: 85px;
-    line-height: 65px;
+    font-size: 120px;
+    line-height: 90px;
     letter-spacing: -3px;
   }
 
   .text {
-    font-size: 28px;
+    font-size: 36px;
+    line-height: 37px;
   }
 }

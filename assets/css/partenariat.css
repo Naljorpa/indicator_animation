@@ -1,6 +1,7 @@
 .animate-box {
   position: relative;
   padding: 0 2rem 2rem 2rem;
+  container-type: inline-size;
 }
 
 .container {
@@ -78,7 +79,25 @@ footer {
   }
 }
 
-@media (min-width: 768px) {
+@container (width > 350px ) {
+  .text-box {
+    top: 75px;
+    left: 20px;
+    line-height: 28px;
+  }
+
+  .percentage {
+    font-size: 85px;
+    line-height: 65px;
+    letter-spacing: -3px;
+  }
+
+  .text {
+    font-size: 28px;
+  }
+}
+
+/* @media (min-width: 768px) {
   .animate-box {
     width: 350px;
   }
@@ -97,4 +116,4 @@ footer {
   .text {
     font-size: 28px;
   }
-}
+} */
