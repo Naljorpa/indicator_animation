@@ -9445,6 +9445,8 @@ body {
   fill: #ededed;
 }
 
+/* Réactivité sur page complète */
+
 @media (min-width: 575px) {
   @container (width > 150px ) {
     .text-box {
