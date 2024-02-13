@@ -9304,15 +9304,15 @@ body {
 
 .percentage {
   display: block;
-  font-size: 20vw;
-  line-height: 14vw;
+  font-size: 25vw;
+  line-height: 17vw;
   letter-spacing: -0.2rem;
 }
 
 .text {
   display: block;
-  font-size: 6vw;
-  line-height: 6vw;
+  font-size: 8vw;
+  line-height: 7vw;
   width: 55%;
 }
 
@@ -9458,29 +9458,34 @@ body {
 
     .percentage,
     .numbers {
-      font-size: 8vw;
-      line-height: 6vw;
+      font-size: 14vw;
+      line-height: 12vw;
       letter-spacing: -9px;
     }
 
     .text {
-      font-size: 2.4vw;
-      line-height: 2.5vw;
+      font-size: 4vw;
+      line-height: 4vw;
     }
   }
+}
 
-  @container (width > 450px ) {
-    .percentage,
-    .numbers {
-      font-size: 120px;
-      line-height: 90px;
-      letter-spacing: -9px;
-    }
+@media (min-width: 990px) {
+  .text-box {
+    top: 10%;
+    left: 20px;
+  }
 
-    .text {
-      font-size: 36px;
-      line-height: 37px;
-    }
+  .percentage,
+  .numbers {
+    font-size: 8vw;
+    line-height: 6vw;
+    letter-spacing: -9px;
+  }
+
+  .text {
+    font-size: 2.4vw;
+    line-height: 2.5vw;
   }
 }
 
@@ -9489,7 +9494,7 @@ body {
   .numbers {
     font-size: 120px;
     line-height: 90px;
-    letter-spacing: -3px;
+    letter-spacing: -9px;
   }
 
   .text {
