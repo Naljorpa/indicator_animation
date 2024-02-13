@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Fonction pour animer la première roulette de pourcentage
   function animatePartenariat1() {
     let currentPercentage = 0;
-    let percentage = 52;
+    let percentage = 52; // à modifier si nécessaire
     let increment = 1;
     let interval = 40;
 
@@ -21,9 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.style.setProperty("--end-value1", number);
   }
 
+  // Fonction pour animer le graphique de la flèche
   function animateInnovation() {
     let currentNumber = 0;
-    let number = 121;
+    let number = 121; // à modifier si nécessaire
     let increment = 1;
     let interval = 20;
 
@@ -44,13 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const animateX = maskRect.querySelector("animate");
     const animateTransform = maskRect.querySelector("animateTransform");
 
-    animateX.beginElement(); // Start the X animation
+    animateX.beginElement();
     animateTransform.beginElement();
   }
 
+  // Fonction pour animer le graphique à bars
   function animateFormation() {
     let currentNumber = 0;
-    let number = 46048;
+    let number = 46048; // à modifier si nécessaire
     let increment = 100;
     let interval = 1;
 
@@ -84,9 +87,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Fonction pour animer la deuxième roullette de pourcentage
   function animatePartenariat2() {
     let currentPercentage = 0;
-    let percentage = 60;
+    let percentage = 60; // à modifier si nécessaire
     let increment = 1;
     let interval = 40;
 
@@ -106,6 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.style.setProperty("--end-value2", number);
   }
 
+  //fonctions pour déclencher les animations à l'aide d'un intersection observer
+
   const observer = new IntersectionObserver(callback, {
     root: null,
     rootMargin: "0px",
@@ -119,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   let entryTrigger = 0;
+
   function callback(entries, observer) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -156,9 +163,4 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.disconnect();
     }
   }
-
-  // animatePartenariat();
-  // animateInnovation();
-  // animateFormation();
-  // animatePartenariat2();
 });
