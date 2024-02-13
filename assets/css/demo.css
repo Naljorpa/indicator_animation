@@ -9276,7 +9276,12 @@ div.tree-child-horizontal {
   float: none;
 }
 
-/* Styles for the animations */
+/* Styles généraux pour les animations */
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-weight: 900;
+}
 
 .animate-box {
   position: relative;
@@ -9289,11 +9294,6 @@ div.tree-child-horizontal {
   width: 100%;
 }
 
-body {
-  font-family: "Overpass", sans-serif;
-  font-weight: 900;
-}
-
 .text-box {
   top: 20%;
   left: 5%;
@@ -9302,18 +9302,31 @@ body {
   z-index: 4;
 }
 
-.percentage {
-  display: block;
-  font-size: 25vw;
-  line-height: 17vw;
-  letter-spacing: -0.2rem;
-}
-
 .text {
   display: block;
   font-size: 8vw;
   line-height: 7vw;
   width: 55%;
+}
+
+.numbers {
+  display: block;
+  font-size: 22vw;
+  line-height: 17vw;
+  letter-spacing: -0.2rem;
+}
+
+/* Styles pour la roulette de pourcentage */
+
+:root {
+  --my-end-width: 0;
+}
+
+.percentage {
+  display: block;
+  font-size: 25vw;
+  line-height: 17vw;
+  letter-spacing: -0.2rem;
 }
 
 .red-circle {
@@ -9336,24 +9349,6 @@ body {
   /* animation: dash-animation 2s ease-in forwards; */
 }
 
-.mask-box {
-  z-index: 3;
-
-  position: absolute;
-  width: 100%;
-}
-
-.mask {
-  width: 100%;
-  position: absolute;
-  z-index: 3;
-  fill: white;
-}
-
-:root {
-  --my-end-width: 0;
-}
-
 @keyframes dash-animation1 {
   to {
     stroke-dasharray: var(--end-value1) 190;
@@ -9366,24 +9361,14 @@ body {
   }
 }
 
-.numbers {
-  display: block;
-  font-size: 22vw;
-  line-height: 17vw;
-  letter-spacing: -0.2rem;
-}
-
-.st3 {
-  display: inline;
-  fill: #e20d1a;
-}
-
-.cls-2 {
-  fill: #fff;
-}
+/* Styles spécifique pour le graphique avec flèche */
 
 .svg-group {
   transform: translateY(-2rem);
+}
+
+.red {
+  fill: #e20d1a;
 }
 
 .fleche {
@@ -9394,7 +9379,20 @@ body {
 }
 
 .mask {
+  width: 100%;
   position: absolute;
+  z-index: 3;
+  fill: white;
+}
+
+.mask-box {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+}
+
+.grey {
+  fill: #ededed;
 }
 
 @keyframes deplacementFleche {
@@ -9424,13 +9422,11 @@ body {
   }
 }
 
-.route {
-  fill: #ededed;
-}
+/* Styles spécifique pour le graphique à barres */
 
 .bar {
-  transform-origin: bottom;
   /* animation: reveal 1s ease forwards; */
+  transform-origin: bottom;
   opacity: 0;
   fill: #ffc102;
   transition: fill 0.5s ease;
