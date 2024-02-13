@@ -18,8 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let number = 190 * (1 - percentage / 100);
 
-    console.log(number);
-    document.documentElement.style.setProperty("--end-value", number);
+    document.documentElement.style.setProperty("--end-value1", number);
   }
 
   function animateInnovation() {
@@ -37,6 +36,16 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("number").textContent = number;
       }
     }, interval);
+
+    const fleche = document.querySelector(".fleche");
+    fleche.style.transform = "unset";
+
+    const maskRect = document.getElementById("maskRect");
+    const animateX = maskRect.querySelector("animate");
+    const animateTransform = maskRect.querySelector("animateTransform");
+
+    animateX.beginElement(); // Start the X animation
+    animateTransform.beginElement();
   }
 
   function animateFormation() {
@@ -94,14 +103,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let number = 190 * (1 - percentage / 100);
 
-    console.log(number);
-    document.documentElement.style.setProperty("--end-value", number);
+    document.documentElement.style.setProperty("--end-value2", number);
   }
 
   const observer = new IntersectionObserver(callback, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.9,
+    threshold: 0.8,
   });
 
   const animateBoxes = document.querySelectorAll(".animate-box");
@@ -112,34 +120,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let entryTrigger = 0;
   function callback(entries, observer) {
-
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        entryTrigger++;
 
-         entryTrigger++;
-
-         console.log(entryTrigger);
+        console.log(entryTrigger);
 
         if (entry.target.classList.contains("partenariat1")) {
           const circlePie = entry.target.querySelector(".x1");
-          circlePie.style.animation = "dash-animation 2s ease-in forwards";
+          circlePie.style.animation = "dash-animation1 2s ease-in forwards";
           animatePartenariat1();
-
-
         }
 
         if (entry.target.classList.contains("innovation")) {
           const arrow = entry.target.querySelector(".fleche");
           arrow.style.animation = "deplacementFleche 2s forwards";
           animateInnovation();
-
         }
 
         if (entry.target.classList.contains("partenariat2")) {
           const circlePie = entry.target.querySelector(".x2");
-          circlePie.style.animation = "dash-animation 2s ease-in forwards";
+          circlePie.style.animation = "dash-animation2 2s ease-in forwards";
           animatePartenariat2();
-
         }
         if (entry.target.classList.contains("formation")) {
           const bars = entry.target.querySelectorAll(".bar");
@@ -148,7 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
           });
           animateFormation();
         }
-
       }
     });
     if (entryTrigger == 4) {

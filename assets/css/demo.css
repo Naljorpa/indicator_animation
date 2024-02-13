@@ -9354,9 +9354,15 @@ body {
   --my-end-width: 0;
 }
 
-@keyframes dash-animation {
+@keyframes dash-animation1 {
   to {
-    stroke-dasharray: var(--end-value) 190;
+    stroke-dasharray: var(--end-value1) 190;
+  }
+}
+
+@keyframes dash-animation2 {
+  to {
+    stroke-dasharray: var(--end-value2) 190;
   }
 }
 
@@ -9383,6 +9389,7 @@ body {
 .fleche {
   position: absolute;
   transform-origin: center center;
+  transform: translate(-152px, 211px);
   /* animation: deplacementFleche 2s forwards; */
 }
 
