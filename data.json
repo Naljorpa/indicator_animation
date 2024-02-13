@@ -1,0 +1,40 @@
+{
+  "graphs": [
+    {
+      "type": "wheel1",
+      "data": {
+        "percentage": 52,
+        "color": "#e20d1a",
+        "text": "Recherche faite en partenariat",
+        "paragraph": "<p>Proportion de la recherche réalisée avec des organisations partenaires des milieux académiques, publics et privés, au Canada et à l’international. Proportion de la recherche réalisée avec des organisations partenaires des milieux académiques, publics et privés, au Canada et à l’international.</p> <p>Proportion de la recherche réalisée avec des organisations partenaires des milieux académiques, publics et privés, au Canada et à l’international.</p>"
+      }
+    },
+    {
+      "type": "arrow",
+      "data": {
+        "number": 121,
+        "color": "#e20d1a",
+        "text": "Projets en innovation pédagogique",
+        "paragraph": "<p>Projets de cours ou de programmes identifiés comme jouant un rôle sociétal en formant dans les domaines de l’avenir ou faisant appel à des méthodes d’enseignement novatrices.</p>"
+      }
+    },
+    {
+      "type": "wheel2",
+      "data": {
+        "percentage": 60,
+        "color": "#ffc102",
+        "text": "Recherche faite en partenariat",
+        "paragraph": "<p>Nombre de personnes participant aux événements ULaval et aux campagnes philanthropiques institutionnelles internes et externes.</p>"
+      }
+    },
+    {
+      "type": "bar",
+      "data": {
+        "number": 46048,
+        "color": "#ffc102",
+        "text": "Inscriptions en formation continue",
+        "paragraph": "<p>Nombre d’inscriptions aux différents cours offerts en formation continue sur la plateforme Brio.</p>"
+      }
+    }
+  ]
+}
