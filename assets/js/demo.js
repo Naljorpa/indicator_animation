@@ -131,8 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (entry.isIntersecting) {
         entryTrigger++;
 
-        console.log(entryTrigger);
-
         if (entry.target.classList.contains("partenariat1")) {
           const circlePie = entry.target.querySelector(".x1");
           circlePie.style.animation = "dash-animation1 2s ease-in forwards";
