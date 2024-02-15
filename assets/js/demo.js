@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentPercentage = 0;
     let percentage = 60; // à modifier si nécessaire
     let increment = 1;
-    let interval = 40;
+    let interval = 35;
 
     let intervalId = setInterval(function () {
       document.getElementById("percentage2").textContent =
